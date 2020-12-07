@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程 - 东莞外贸鞋批发</title><meta name="Description" content="东莞外贸货批发"><meta property="og:title" content="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程" />
+<meta property="og:description" content="安装armbian 测试了很多版本的Armbian&#43;omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waimao365.top/posts/7.html/" />
+<meta property="og:image" content="https://waimao365.top/logo.png"/>
+<meta property="article:published_time" content="2019-12-08T18:28:42+00:00" />
+<meta property="article:modified_time" content="2019-12-08T18:28:42+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://waimao365.top/logo.png"/>
+
+<meta name="twitter:title" content="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程"/>
+<meta name="twitter:description" content="安装armbian 测试了很多版本的Armbian&#43;omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://waimao365.top/posts/7.html/" /><link rel="prev" href="https://waimao365.top/posts/6.html/" /><link rel="next" href="https://waimao365.top/posts/8.html/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/waimao365.top\/posts\/7.html\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/waimao365.top\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "斐讯N1, omv, typecho, lnmp, mysql, nginx","wordcount":  1945 ,
+        "url": "https:\/\/waimao365.top\/posts\/7.html\/","datePublished": "2019-12-08T18:28:42+00:00","dateModified": "2019-12-08T18:28:42+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "东莞外贸货批发","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/waimao365.top\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "东莞外贸"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="东莞外贸鞋批发"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 外贸鞋批发 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/7.html/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="东莞外贸鞋批发"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span>LoveIt</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">外贸鞋批发</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/7.html/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="163168.xyz" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>东莞外贸</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%96%90%E8%AE%AFn1/"><i class="far fa-folder fa-fw"></i>斐讯N1</a>&nbsp;<a href="/categories/omv/"><i class="far fa-folder fa-fw"></i>omv</a>&nbsp;<a href="/categories/typecho/"><i class="far fa-folder fa-fw"></i>typecho</a>&nbsp;<a href="/categories/lnmp/"><i class="far fa-folder fa-fw"></i>lnmp</a>&nbsp;<a href="/categories/mysql/"><i class="far fa-folder fa-fw"></i>mysql</a>&nbsp;<a href="/categories/nginx/"><i class="far fa-folder fa-fw"></i>nginx</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-08">2019-12-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1945 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/7.html/" class="leancloud_visitors" data-flag-title="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快">做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载">在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</a></li>
+    <li><a href="#安装nginx和mysql">安装nginx和mysql</a>
+      <ul>
+        <li><a href="#设置nginx-点击pools添加typecho">设置nginx 点击pools，添加typecho</a></li>
+        <li><a href="#omv安装数据库">omv安装数据库</a></li>
+        <li><a href="#mysql自动启动">mysql自动启动</a></li>
+        <li><a href="#备份数据库和还原数据库">备份数据库和还原数据库</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="安装armbian">安装armbian</h1>
+<p>测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用
+下面是链接
+<a href="https://www.right.com.cn/forum/thread-788004-1-1.html">https://www.right.com.cn/forum/thread-788004-1-1.html</a></p>
+<!-- more -->
+<p>ROM下载地址：链接：https://share.weiyun.com/5IsYMcO 密码：fop0i5
+需要说明的是img制作成U盘后，不需要替换dtb，不需要更换内核，直接使用就可以，一步到位。</p>
+<p>先把镜像写入U盘，从U盘启动后，从路由器找到N1的ip地址
+通过Xshell登陆 输入N1的ip 账号root 密码1234
+第一次进入需要修改密码
+再写入N1的内置存储，用下面的命令就可以了
+/boot/create-mbr-linux.sh
+/root/install.sh
+写入完成后，断电，拔U盘，插电重启</p>
+<p>切换中国时间
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; echo &ldquo;Asia/Shanghai&rdquo; &gt; /etc/timezone</p>
+<p>运行
+nano /etc/apt/sources.list
+修改源为国内源
+deb <a href="http://mirrors.tuna.tsinghua.edu.cn/debian">http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch main contrib non-free
+deb <a href="http://mirrors.tuna.tsinghua.edu.cn/debian">http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch-updates main contrib non-free
+deb <a href="http://mirrors.tuna.tsinghua.edu.cn/debian-security">http://mirrors.tuna.tsinghua.edu.cn/debian-security</a> stretch/updates main contrib non-free
+deb <a href="http://mirrors.tuna.tsinghua.edu.cn/debian">http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch-backports main</p>
+<p>或者</p>
+<p>deb <a href="http://mirrors.ustc.edu.cn/debian">http://mirrors.ustc.edu.cn/debian</a> stretch main contrib non-free
+deb <a href="http://mirrors.ustc.edu.cn/debian">http://mirrors.ustc.edu.cn/debian</a> stretch-updates main contrib non-free
+deb <a href="http://mirrors.ustc.edu.cn/debian">http://mirrors.ustc.edu.cn/debian</a> stretch-backports main contrib non-free
+deb <a href="http://mirrors.ustc.edu.cn/debian-security/">http://mirrors.ustc.edu.cn/debian-security/</a> stretch/updates main contrib non-free</p>
+<p>保存后，更新源
+执行 apt-get update 命令即可更新源
+执行 apt-get upgrade 更新软件</p>
+<h2 id="做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快">做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</h2>
+<h1 id="安装omv">安装omv</h1>
+<p>armbian-config</p>
+<p>选择Software，回车确认 接着选择Softy，回车确认 最后选择OMV，空格勾选，回车确认开始安装</p>
+<p>然后，按tab键，选择OK，回车确认 最后等OMV程序自动安装完成</p>
+<p>依次选择Exit、Cancel，返回命令行
+至此OMV安装完毕，正常的话，浏览器输入N1 ip或http://aml/ ,会看到OpenMediaVault登陆界面</p>
+<p>此时使用默认用户名：admin 默认密码：openmediavault ，登陆即可</p>
+<p>OMV安装OMVEXTRAS
+官方教程  <a href="https://www.openmediavault.cn/read-omvextrasorg.html">https://www.openmediavault.cn/read-omvextrasorg.html</a>
+安装好后，按下图设置</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png" /></p>
+<h1 id="安装typecho">安装Typecho</h1>
+<h2 id="在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载">在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png" /></p>
+<p>用winscp软件，到2t下面建www文件夹，在www下面建typecho文件夹，在typecho下面建public_html 文件夹  都设置777权限，如下图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png" /></p>
+<h2 id="安装nginx和mysql">安装nginx和mysql</h2>
+<p>在插件找插件，点安装就可以的，先安装nginx，再安装mysql，安装好后入下图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png" /></p>
+<h3 id="设置nginx-点击pools添加typecho">设置nginx 点击pools，添加typecho</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png" />
+点击服务器，添加后保存
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png" />
+应用更改后再设置，选择typecho目录，选择公共目录，选择public_html，启用php，php-fpm-pool选择刚刚建立的typecho</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png" /></p>
+<p>Index下面的三个选项都打开</p>
+<p>这里先打乱一些顺序，我发现安装好typecho后，只能打开前台，文件页面和管理后台都出现404，下面就是解决方法
+下面有个扩展选项，填入下面代码</p>
+<p>if (-f $request_filename/index.html){
+rewrite (.<em>) $1/index.html break;
+}
+if (-f $request_filename/index.php){
+rewrite (.</em>) $1/index.php;
+}
+if (!-f $request_filename){
+rewrite (.*) /index.php;
+}</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png" /></p>
+<p>也可以直接在配置 /etc/nginx/sites-available/zzz-omv-nginx 最后面加上面的代码
+就可以了</p>
+<p>最后在General点击启用，nginx 就配置好了
+下面配置数据库</p>
+<h3 id="omv安装数据库">omv安装数据库</h3>
+<p><a href="https://www.openmediavault.cn/read-omv-install-mysql.html">https://www.openmediavault.cn/read-omv-install-mysql.html</a></p>
+<p>打开mysql，重设密码。绑定ip改成n1的ip</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png" /></p>
+<p>点击show
+用户ID：omvadmin
+密码：刚修改过的
+登陆后，创建数据库
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png" />
+官方下载 <a href="http://typecho.org/">http://typecho.org/</a><br>
+解压后，将文件上传到前面建立都public_html文件夹，就可以安装了。</p>
+<h3 id="mysql自动启动">mysql自动启动</h3>
+<p>安装配置完nginx和mysql后默认mysql是不能自启动的。所以还要配置数据库自启动。用winscp连接OMV系统【默认用户名root密码openmediavault】。连接后打开etc-找到rc.loal,右键点编辑，在exit 0上一行添加service mysqld start保存退出。就可以了</p>
+<h3 id="备份数据库和还原数据库">备份数据库和还原数据库</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png 1.5x, https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png"
+        title="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png" /></p>
+<h1 id="顺便推荐一个非常漂亮的主题">顺便推荐一个非常漂亮的主题</h1>
+<p><a href="https://zhebk.cn/Web/Akina.html">https://zhebk.cn/Web/Akina.html</a></p>
+<h1 id="下面是相关命令和教程">下面是相关命令和教程</h1>
+<p>omv-firstaid
+First aid 界面翻译</p>
+<p>configure network interface 配置网络界面</p>
+<p>configure web control panel 配置Web控制面板</p>
+<p>change control panel administrator password 更改控制面板管理员密码</p>
+<p>restore failed login attempt counter 恢复失败登录尝试计数器</p>
+<p>restore configuration backup 恢复配置备份</p>
+<p>check configuration status file 检查配置状态文件</p>
+<p>check RRD database 检查RRD数据库</p>
+<p>clear local upload package repository 清除本地上传包存储库</p>
+<p>clean apt 清除apt</p>
+<p>clear web control panel cache 清除Web控制面板缓存</p>
+<p>submit diagnostic report to administrator 向管理员提交诊断
+卸载相关
+apt-get remove 会删除软件包而保留软件的配置文件
+apt-get purge 会同时清除软件包和软件的配置文件
+卸载openmediavault命令
+apt-get purge openmediavault</p>
+<p>armbian-config可视化操作里面有许多快捷的系统设置，
+比如说基本的时间设置、网络设置，Wi-Fi设置，设置热点、安装桌面和远程、安装热门的第三方软件（诸如nginx Nextcloud、Plex、OpenMediaVault、Pi-hole、Transmission、Docker等热门软件）
+下面收集了一些omv的相关教程，可以参考
+omv使用</p>
+<p>OMV安装NextCloud
+<a href="https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html">https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html</a></p>
+<p>phicomm N1 armbian环境下安装功能丰富的开源NAS系统 OpenMediaVault
+<a href="https://www.right.com.cn/forum/thread-342164-1-1.html">https://www.right.com.cn/forum/thread-342164-1-1.html</a></p>
+<p>N1 OpenMediaVault 使用DLNA+VLC多媒体应用的小白教程
+<a href="https://www.right.com.cn/forum/thread-342841-1-1.html">https://www.right.com.cn/forum/thread-342841-1-1.html</a></p>
+<p>OpenMediaVault(OMV)配置Docker
+<a href="https://www.jianshu.com/p/5b0eacc61527">https://www.jianshu.com/p/5b0eacc61527</a></p>
+<p>OMV安装可道云(kodexplorer)
+<a href="https://www.jianshu.com/p/4731a1ef01d1">https://www.jianshu.com/p/4731a1ef01d1</a></p>
+<p>OMV安装web服务器详细教程
+<a href="https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html">https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-12-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/7.html/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://waimao365.top/posts/7.html/" data-title="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程" data-hashtags="斐讯N1,omv,typecho,lnmp,mysql,nginx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://waimao365.top/posts/7.html/" data-hashtag="斐讯N1"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://waimao365.top/posts/7.html/" data-title="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://waimao365.top/posts/7.html/" data-title="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://waimao365.top/posts/7.html/" data-title="斐讯N1安Armbian安装OMV安装nginx&#43;mysql安装typecho全过程" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%96%90%E8%AE%AFn1/">斐讯N1</a>,&nbsp;<a href="/tags/omv/">omv</a>,&nbsp;<a href="/tags/typecho/">typecho</a>,&nbsp;<a href="/tags/lnmp/">lnmp</a>,&nbsp;<a href="/tags/mysql/">mysql</a>,&nbsp;<a href="/tags/nginx/">nginx</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/6.html/" class="prev" rel="prev" title="斐讯N1 docker安装homeassistant  配置斐讯dc1智能插座"><i class="fas fa-angle-left fa-fw"></i>斐讯N1 docker安装homeassistant  配置斐讯dc1智能插座</a>
+            <a href="/posts/8.html/" class="next" rel="next" title="N1安装omv后安装docker&#43;transmission&#43;lnmp搭建网站">N1安装omv后安装docker&#43;transmission&#43;lnmp搭建网站<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.73.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="163168.xyz" target="_blank">东莞外贸</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"6o68dIgmw1avRrOJ9pxgpR5i-MdYXbMMI","appKey":"8N4dB19cJ6rD3ha0iI84rjlb","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://6o68dIgm.api.lncldglobal.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
