@@ -2,42 +2,10 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://waimao365.top/posts/2.html/</loc><lastmod>2019-12-27T13:10:32&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://waimao365.top/about/</loc><lastmod>2017-08-28T21:41:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://waimao365.top/categories/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://waimao365.top/en/categories/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="https://waimao365.top/fr/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://waimao365.top/categories/"
-                    /></url><url>
-            <loc>https://waimao365.top/tags/even/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/categories/even/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/tags/hugo/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/categories/hugo/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/posts/25.html/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/tags/loveit/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/categories/loveit/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/posts/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://waimao365.top/tags/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://waimao365.top/en/tags/"
-                        /><xhtml:link
-                        rel="alternate"
-                        hreflang="fr"
-                        href="https://waimao365.top/fr/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://waimao365.top/tags/"
-                    /></url><url>
-            <loc>https://waimao365.top/</loc><lastmod>2020-11-23T22:34:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            <loc>https://waimao365.top/posts/</loc><lastmod>2019-12-27T13:10:32&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://waimao365.top/</loc><lastmod>2019-12-27T13:10:32&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://waimao365.top/en/"
@@ -50,7 +18,32 @@
                     hreflang="zh-cn"
                     href="https://waimao365.top/"
                     /></url><url>
-            <loc>https://waimao365.top/posts/19.html/</loc><lastmod>2019-12-27T13:10:32&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://waimao365.top/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://waimao365.top/en/categories/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://waimao365.top/fr/categories/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://waimao365.top/categories/"
+                    /></url><url>
+            <loc>https://waimao365.top/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="https://waimao365.top/en/tags/"
+                        /><xhtml:link
+                        rel="alternate"
+                        hreflang="fr"
+                        href="https://waimao365.top/fr/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="https://waimao365.top/tags/"
+                    /></url><url>
             <loc>https://waimao365.top/tags/content/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fr"
