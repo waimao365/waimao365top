@@ -3,41 +3,13 @@
         <title>所有文章 - 东莞外贸鞋批发</title>
         <link>https://waimao365.top/posts/</link>
         <description>所有文章 | 东莞外贸鞋批发</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 02 Jun 2020 15:55:32 &#43;0000</lastBuildDate><atom:link href="https://waimao365.top/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>hugo搭建和使用教程</title>
-    <link>https://waimao365.top/posts/22.html/</link>
-    <pubDate>Mon, 01 Jun 2020 15:55:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/22.html/</guid>
-    <description><![CDATA[前言 做博客就图个稳定，一次性买了10年的域名，搭配免费的github，适合做长期博客。 之前安装的hexo，可玩性非常强，前面文章有写一些关于]]></description>
-</item><item>
-    <title>主题文档 - 内容</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Nov 2020 22:34:42 &#43;0800</lastBuildDate><atom:link href="https://waimao365.top/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo文章格式和固定链接</title>
     <link>https://waimao365.top/posts/25.html/</link>
-    <pubDate>Thu, 05 Mar 2020 16:30:05 &#43;0800</pubDate>
+    <pubDate>Mon, 23 Nov 2020 22:34:42 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://waimao365.top/posts/25.html/</guid>
-    <description><![CDATA[<p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容.</p>]]></description>
-</item><item>
-    <title>n1终极玩法Armbian-5.77安装docker宝塔openwrt和HomeAssistant</title>
-    <link>https://waimao365.top/posts/23.html/</link>
-    <pubDate>Tue, 02 Jun 2020 15:55:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/23.html/</guid>
-    <description><![CDATA[安装Armbian-5.77 https://www.right.com.cn/forum/thread-510423-1-1.html 下载Armbian-5.77写入U盘 替换低负载的dtb meson-gxl-s905d-phicomm-n1-xiangsm.dtb 开启bbr 在/etc/sysctl.conf末尾添加下]]></description>
-</item><item>
-    <title>LG V30 韩版V300L 8.0 9.0 root刷类原生系统Havoc 10.0的详细过程</title>
-    <link>https://waimao365.top/posts/21.html/</link>
-    <pubDate>Mon, 23 Mar 2020 15:18:30 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/21.html/</guid>
-    <description><![CDATA[前言 官方系统：刷机root后，未安装其他软件，开机scene查看内存占50%， 安装日常软件，开发者选项里面，系统可用用内存一般在200左右 Havoc]]></description>
-</item><item>
-    <title>k2p老毛子固件绑定域名之 cloudflare.com</title>
-    <link>https://waimao365.top/posts/20.html/</link>
-    <pubDate>Fri, 03 Jan 2020 13:10:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/20.html/</guid>
-    <description><![CDATA[k2p老毛子固件绑定域名之 cloudflare.com 使用 Cloudflare 实现顶级个人域名的 ddns 服务。 https://www.cloudflare.com 使用前需要安装 curl 程序，可以安装opt后输入 opkg install curl 敲回车键安装启用opt 点击获取]]></description>
+    <description><![CDATA[hexo文章格式 1 2 3 4 5 6 7 8 9 10 11 12 13 14 --- title: 文章标题 date: 2020-11-23 22:33:32 categories: - hugo - 分类 - 博客 tags: - hugo - 标签 - 博客 abbrlink: 25 slug: 25 --- hugo文章格式 1 2 3 4 5 6 7 8]]></description>
 </item><item>
     <title>关于微店购物的相关问题</title>
     <link>https://waimao365.top/posts/19.html/</link>
@@ -45,33 +17,5 @@
     <author>作者</author>
     <guid>https://waimao365.top/posts/19.html/</guid>
     <description><![CDATA[关于微店回复慢 因实体批发比较繁忙，经常回复会比较慢，谢理解！大家可以先看下下面的相关解答哈！有不清楚的还可以咨询我们的哈！ 关于发货 默认中通，]]></description>
-</item><item>
-    <title>解决安卓手机卡顿 安装google商店官方软件的方法</title>
-    <link>https://waimao365.top/posts/17.html/</link>
-    <pubDate>Mon, 23 Dec 2019 12:20:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/17.html/</guid>
-    <description><![CDATA[下载play.google.com商店软件的方法 国内安卓软件多数都是比较流氓，内存占用大，弹广告，要想手机流畅运行，建议尽量使用google]]></description>
-</item><item>
-    <title>黑苹果给安卓手机刷入twrp recovery教程</title>
-    <link>https://waimao365.top/posts/16.html/</link>
-    <pubDate>Wed, 18 Dec 2019 01:00:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/16.html/</guid>
-    <description><![CDATA[手机设置 点击设置，系统，关机手机，版本号联系点击三下，进入开发者模式，找到开发者选项，打开OME解锁，打开Android调试，打开网络ADB]]></description>
-</item><item>
-    <title>支付宝通过三星健康修改步数的教程和注意事项</title>
-    <link>https://waimao365.top/posts/15.html/</link>
-    <pubDate>Sat, 14 Dec 2019 15:55:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/15.html/</guid>
-    <description><![CDATA[支付宝通过三星健康修改步数的教程和注意事项 全部软件下载地址（担心以后新版的支付宝不能同步，所以在网盘也放了最近的三个支付宝，酷安下载的） https://www.lanzous.com/b059xem4d 安]]></description>
-</item><item>
-    <title>小白电脑安装windows系统，linxu和黑苹果的相关资料</title>
-    <link>https://waimao365.top/posts/14.html/</link>
-    <pubDate>Fri, 13 Dec 2019 19:05:32 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://waimao365.top/posts/14.html/</guid>
-    <description><![CDATA[电脑安装系统必备 操作系统下载 官方系统 http://msdn.itellyou.cn/ https://tb.rg-adguard.net/public.php 第三方系统 http://twm000.top/ http://www.uqi.me/ https://icura.cn/ PE http://www.wepe.com.cn/ https://www.itsk.com/topic-software.html http://www.myfeng.cn/ 驱动 https://www.sysceo.com/ https://www.160.com/ http://www.drivergenius.com/ http://weishi.360.cn/qudongdashi/index.html https://www.ludashi.com/ 系统激活 http://twm000.ys168.com/ 精品软件下载 https://www.landiannews.com/ https://www.appcgn.com/ https://www.repaik.com/ http://www.carrotchou.blog/ https://www.ccava.net/ https://www.luochenzhimu.com/ https://hrtsea.com/ 国产杀毒推荐 https://www.huorong.cn/ https://www.wisevector.com/ 杀毒论坛推]]></description>
 </item></channel>
 </rss>
